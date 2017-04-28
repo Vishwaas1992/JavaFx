@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="26.0" minWidth="10.0" prefWidth="26.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="158.0" prefWidth="158.0" />
+      <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="149.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="165.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="dateTable" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="CENTER" />
+      <DatePicker fx:id="phyDatePicker" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <LineChart fx:id="lineChart" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.rowSpan="5">
+        <xAxis><NumberAxis label="Values for X-Axis" lowerBound="0" tickUnit="1" upperBound="3" fx:id="xAxis" /></xAxis>
+        <yAxis><NumberAxis fx:id="yAxis" label="Values for Y-Axis" lowerBound="0" tickUnit="1" upperBound="3" /></yAxis>
+      </LineChart>
+      <RadioButton fx:id="weekRBtn" mnemonicParsing="false" selected="true" text="Week" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <RadioButton fx:id="monthRBtn" mnemonicParsing="false" text="Month" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+      <RadioButton fx:id="yearRBtn" mnemonicParsing="false" text="Year" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <RadioButton fx:id="allTimeRBtn" mnemonicParsing="false" text="All Time" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label text="Total" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+      <Label fx:id="totalTxt" text="Label" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+      <Button fx:id="goBtn" mnemonicParsing="false" prefHeight="20.0" prefWidth="35.0" text="GO" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+      <Button fx:id="fwdBtn" mnemonicParsing="false" prefWidth="25.0" text="&gt;" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Button fx:id="backBtn" mnemonicParsing="false" prefWidth="25.0" text="&lt;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

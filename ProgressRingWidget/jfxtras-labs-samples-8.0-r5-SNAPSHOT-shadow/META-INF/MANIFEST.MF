@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: fxsampler.FXSampler
+Implementation-Title: JFXtras-samples
+Implementation-Version: 8.0
+
